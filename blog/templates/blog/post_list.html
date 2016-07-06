@@ -1,12 +1,13 @@
 <html>
     <head>
-        <title> Girls blog</title>
+        <title> Beth's blog</title>
     </head>
     <body>
         <div>
-            <h1><a href="">Django  Blog</a></h1>
+            <h1><a href="">Django Blog</a></h1>
 
         </div>
+       
 
       
 {% for post in posts %}
@@ -16,5 +17,6 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
+
     </body>
 </html>
