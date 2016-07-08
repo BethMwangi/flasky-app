@@ -1,33 +1,17 @@
 
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Beth Blog</title>
- <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
- <link rel="stylesheet" href="{% static 'css/style.css' %}">
- <link rel="stylesheet" type="text/css" href="css/foundation.min.css" />
-</head>
-    <body>
-        <div class ="row header">
- <div class="large-6 medium-6 columns header">
-            <h1><a href="">Blog</a></h1>
 
-        </div>   </div>
+{% extends 'blog/base.html' %}
+{% block content %}
         {% for post in posts %}
         <div class="row posts">
             <div class="large-12 columns post">
 <div class="date">
    
-        <p>published: {{ post.published_date }}</p>
+        <p>{{ post.published_date }}</p>
     </div>
-        <h1><a href="">{{ post.title }}</a></h1>
+        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
-   
+   </div></div>
 {% endfor %}
-</div> 
-</div>
-    </body>
-</html>
+{% endblock %}
