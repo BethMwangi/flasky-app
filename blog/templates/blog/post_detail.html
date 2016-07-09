@@ -8,7 +8,9 @@
 	{{ post.published_date }}
 	</div>
 	{% else %}
-	<a class="btn btn-default" href="{% url 'blog.views.post_publish' pk=post.pk %}">Publish</a>
+	<a href="{% url 'blog.views.post_publish' pk=post.pk %}" class="action-button shadow animate green"> Publish </a>
+
+	<!--  <a href="#" class="action-button shadow animate green">Are</a> -->
 	{% endif %}
 	{% if user.is_authenticated %}
 	<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><i class="fa fa-pencil" aria-hidden="true" ></i></a>
