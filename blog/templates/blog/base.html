@@ -11,23 +11,83 @@
  <link rel="stylesheet" type="text/css"  href="/static/css/foundation.min.css">
  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+ <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 
 </head>
     <body>
-        <div class ="row header">
+        <!-- HEADER STARTS HERE --> 
+ <header class="navbar navbar-inverse navbar-fixed-top heading" role="banner">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle togglebutton" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+
+
+</button>
+
+<!-- 
+<a class='shym-logo'> <img src='img/logo-shym.png' alt='Shym'/>< -->/a>
+<ul class='shym-social-icons'>
+  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+ <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+ </ul>
+</div>
+
+ <div class="collapse navbar-collapse menubar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="#" ><i class="fa fa-fw fa-home"></i>Home</a>                    </li>
+                    <li ><a href="#"><i class="fa fa-fw fa-support"></i>Support</a>
+                   
+                    <li><a href="#"><i class="fa fa-fw fa-th"></i>Widgets</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-bar-chart-o"></i>Recent Works</a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-users"></i>Users<i class="icon-angle-down"></i></a>
+                       
+
+                    </li>
+                    <li><a href="#"><i class="fa fa-fw fa-book"></i>Blog</a></li> 
+                    
+                </ul>
+            </div>
+            
+</div>
+</header><!---->
+
+       
+        <div id="headerwrap">
+        <div class="container">
+            <br>
+            <h1><a href="{% url 'blog.views.post_list' %}">Beth's Blog</a></h1>
+
+            <h2>Technology | Inspire | Experience</h2>
+            <div class="row">
+                <br>
+                <br>
+                <br>
+                <div class="large-6 columns ">
+                </div>
+            </div>
+        </div><!-- /container -->
+    </div><!-- /headerwrap -->
+        <div class ="row header fullwidth">
  <div class="large-6 medium-6 columns header">
     {% if user.is_authenticated %}
     <a href="{% url 'post_new' %}" class="top-menu"><i class="fa fa-plus" aria-hidden="true"></i></a>
     <a href="{% url 'post_draft_list' %}" class="top-menu"><i class="fa fa-pencil" aria-hidden="true" ></i></a>
-    <p class="top-menu">Hello{{ user.username }}<small>(<a href="{% url 'logout' %}"> Log out</a>)</small></p>
+    <p class="top-menu">Hello {{ user.username }}<small>(<a href="{% url 'logout' %}"> Log out</a>)</small></p>
     {% else %}
     <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
     {% endif %}
 
-            <h1><a href="{% url 'blog.views.post_list' %}">Blog</a></h1>
-
+         <!--    <h1><a href="{% url 'blog.views.post_list' %}">Blog</a></h1>
+ -->
         </div>   </div>
         <div class="row">
             <div class="medium-8 columns">
