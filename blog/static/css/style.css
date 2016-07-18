@@ -1,13 +1,13 @@
 
 
 #headerwrap {
-	background: url(../img/coffee.jpg) no-repeat center top;
+	background: url(../img/comp.jpg) no-repeat center top;
 	margin-top: -10px;
 	padding-top:15px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 500px;
+	min-height: 600px;
 	width: 100%;
 	-webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -172,7 +172,8 @@ section.features, section.blog-intro, section.blog {
           transition: all 300ms ease-in-out;
   position: fixed;
   width: 100%;
-  z-index: 999; }
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7); }
 
 .fixed {
   position: fixed;
@@ -239,9 +240,17 @@ header {
           transform: translateX(-50%); 
  }
 
+.intro {
+font-family: 'Dancing Script', cursive;
+}
 h1 a {
     color: #FCA205;
     font-family: 'Lobster';
+/*   font-family: Fertigo Pro Regular;*/
+}
+h1 a:hover {
+color: whitesmoke;
+
 }
 .animate
 {
