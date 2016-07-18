@@ -33,13 +33,20 @@
 	font-weight: 100;
 	letter-spacing: 2px;
 }
+.post{
 
+  padding-top:6%;
+}
 /*Username heading and styling*/
 .user{
 
   font-family: 'Dancing Script', cursive;
   font-size: 2em;
 
+}
+/*post,date and heading styling*/
+.date, .post-title{
+  font-family: 'Almendra', serif;
 }
 
 .btn {
