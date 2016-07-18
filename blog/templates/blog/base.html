@@ -24,13 +24,13 @@
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
-                                <li><a href="#features">Features</a></li>
+                                <li><a href="#features">About Me</a></li>
                                 <li><a href="#assets">Assets</a></li>
-                                <li><a href="#blog">Blog</a></li>
-                                <li><a href="#download">Download</a></li>
+                                <li><a href="#blog">Blog</Sa></li>
+                                <li><a href="#download">Portfolio</a></li>
                             </ul>
                             <ul class="member-actions">
-                                <li><a href="#download" class="login">Log in</a></li>
+                                <li><a href="{% url 'login' %}"  class="login">Log in</a></li>
                                 <li><a href="#download" class="btn-white btn-small">Sign up</a></li>
                             </ul>
                         </nav>
@@ -62,7 +62,7 @@
     {% if user.is_authenticated %}
     <a href="{% url 'post_new' %}" class="top-menu"><i class="fa fa-plus" aria-hidden="true"></i></a>
     <a href="{% url 'post_draft_list' %}" class="top-menu"><i class="fa fa-pencil" aria-hidden="true" ></i></a>
-    <p class="top-menu">Hello {{ user.username }}<small>(<a href="{% url 'logout' %}"> Log out</a>)</small></p>
+    <p class="top-menu user">Hello {{ user.username }}<small>(<a href="{% url 'logout' %}"> Log out</a>)</small></p>
     {% else %}
     <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
     {% endif %}

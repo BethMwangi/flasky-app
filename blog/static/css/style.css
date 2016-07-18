@@ -34,6 +34,14 @@
 	letter-spacing: 2px;
 }
 
+/*Username heading and styling*/
+.user{
+
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+
+}
+
 .btn {
   font-size: 13px;
   border: solid 2px;
