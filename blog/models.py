@@ -2,12 +2,13 @@
 from django.db import models
 from django.utils import timezone
 from django.shortcuts import render
+# from django_markdown.models import MarkdownField
 # from .models import Post
 
 class Post(models.Model):
 	author = models.ForeignKey('auth.User')
 	title = models.CharField(max_length =200)
-	text = models.TextField()
+	text = models.CharField(max_length=1000)
 	created_date = models.DateTimeField(
             default=timezone.now)
 	
